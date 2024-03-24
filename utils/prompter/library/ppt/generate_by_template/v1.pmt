@@ -1,0 +1,26 @@
+# Requirement:
+根据[Start.mina_content]的内容，以[PptTemplate]提供的模板，结合模板参数将PPT内容，最后按照[OutputFormat]格式md结构化输出
+
+# PptTemplate:
+## 模板信息:```{template_params}```
+## 模板参数说明:
+- 格式中的`first_slide`、`catalogue_slide`、`end_slide`、`content_slide`都必须生成
+- `content_slide`选择匹配多个模板使用，保持多样性。
+- `params`中`title`是PPT页面的标题，`subtitle`是子标题，`desc`是标题的具体描述（20-40字），`content`是更细致的内容（40-60字），`n`是阿拉伯数字序号。
+- `params`中同一个子列表带序号的`title`、`subtitle`、`desc、`content`、`n`，在内容上需要一一对应。
+
+# Attention:
+- 严格按照模板格式输出，不要省略
+- 请展开你的想象，尽可能丰富`content`描述，不要过于简单，尽量详细描述
+- 请注意内容的格式，不要出现格式错误的情况
+
+# OutputFormat:
+```json
+{output_format}
+```
+
+# Start:
+mina_content: ```{mina_content}```
+author: {author}
+nowTime: {now_date}
+output: ```json

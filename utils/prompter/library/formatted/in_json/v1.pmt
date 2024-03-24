@@ -1,0 +1,4 @@
+输出内容严格按照markdown的json返回：
+```json
+{JSON_FORMAT}
+```
