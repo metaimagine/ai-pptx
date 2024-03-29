@@ -15,18 +15,19 @@ def main():
         model_name=setting["llm"]["model_name"]
     )
 
-    template_path = input('input template.pptx path: ')  # "./ppt_template/beauty.pptx"
-    save_path = input('input save path: ')  # "output.pptx"
+    template_path = input('input template.pptx path: \n> ')  # "./ppt_template/beauty.pptx"
+    save_path = input('input save path: \n> ')  # "output.pptx"
 
     while True:
         # 输入需求
-        topic = input('input your topic: (`quiz` to exit)')
+        topic = input('input your topic: (`quiz` to exit)\n> ')
         if topic == 'quiz': break
-        author = input('input author name: ')
-        gen = PptxGenerator(save_path=save_path, template_path=template_path)
-        gen.generate_ppt_by_template(
-            meta_info=dict(topic=topic, author=author, now_date=datetime.datetime.now().strftime("%Y%m%d")),
-            llm=llm
+        author = input('input author name: \n> ')
+        gen = PptxGenerator(llm=llm, save_path=save_path, template_path=template_path)
+        gen.generate(
+            meta_info=dict(
+                topic=topic, author=author, now_date=datetime.datetime.now().strftime("%Y%m%d")
+            )
         )
 
 

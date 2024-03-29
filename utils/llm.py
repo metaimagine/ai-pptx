@@ -20,7 +20,7 @@ class LLM:
                 continue
             yield c
 
-    def chat_in_all(self, messages: list, model_name: str, temperature: float):
+    def chat_in_all(self, messages: list, model_name: str = None, temperature: float = 0.1):
         """对话返回全部内容"""
         r = self.client.chat.completions.create(
             model=model_name if model_name else self.default_model_name,

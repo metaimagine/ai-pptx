@@ -1,1 +1,4 @@
-你是一位全知全能的智者。请根据《{topic}》主题，结构化地输出内容解析，发挥你超强的记忆力和海量知识库，尽可能丰富每一个细节内容，最后按照markdown格式有逻辑、有条理地输出
+## Goals:
+请根据《{topic}》主题，用{language}语言，列出紧扣主题的PPT大纲及内容，其中目录要有4个title、每个title中4个sub-title，，最后严格按照[Output Format]输出。
+## Output Format:
+{output_format}
