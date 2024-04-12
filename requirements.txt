@@ -4,3 +4,4 @@ jojo-office==0.2.6
 gradio==4.8.0
 markdown==3.6
 bs4==0.0.2
+Jinja2
