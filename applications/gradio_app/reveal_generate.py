@@ -71,14 +71,16 @@ def reveal_generator_tab():
         with gr.Row():
             topic_textbox = gr.Textbox(label="Topic", scale=3)
             random_id_textbox = gr.Textbox(label="内容随机码ID", interactive=False, scale=1)
-            generate_md_btn = gr.Button("🤖 AI Generate MD", scale=1)
-            generate_link_btn = gr.Button("Generate Live Link", scale=1)
+            with gr.Column(scale=1):
+                generate_md_btn = gr.Button("Step.01 🤖 AI Generate MD", scale=1)
+                generate_link_btn = gr.Button("Step.02 Generate Live Link", scale=1)
 
         with gr.Row():
-            generated_md = gr.Markdown("👉 点击按钮 [🤖 AI Generate MD] 生成内容")
+            generated_md = gr.Markdown("Step.01 👉 PPT 大纲生成区域")
+            generated_live_link_md = gr.Markdown("Step.02 👉 链接生成区域")
 
         generate_md_btn.click(fn=generate_presentation_md, inputs=topic_textbox, outputs=[
                               generated_md, random_id_textbox])
 
         generate_link_btn.click(fn=generate_live_link,
-                                inputs=random_id_textbox, outputs=generated_md)
+                                inputs=random_id_textbox, outputs=generated_live_link_md)
