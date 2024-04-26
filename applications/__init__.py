@@ -16,8 +16,6 @@ templates_path = "./applications/templates"
 
 templates = Jinja2Templates(directory=templates_path)
 
-app.mount("/presentation/static", StaticFiles(directory=static_path), name="static")
-
 
 @app.get("/presentation/{pid}")
 def home(pid, request: Request):
