@@ -5,16 +5,9 @@
 📢 Not only use llm to generate ppt, but also according to your favorite ppt template. Just you need to simply change the template parameters.
 
 ## ShowCase
-
-<div style="display: flex">
-    <img src="./docs/imgs/template_ppt.png" style="max-width: 50%;height: auto; display: inline-block">
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="./docs/imgs/generated_ppt.png" style="max-width: 50%;height: auto;display: inline-block">
-</div>
-
-- Generated Slide
-
-![show](./docs/imgs/generated_ppt.png)
+| Template                                 | Generated Slide                               |
+|------------------------------------------|-------------------------------------------|
+| <img src="./docs/imgs/template_ppt.png"> | <img src="./docs/imgs/generated_ppt.png"> |
 
 ## Installation
 
