@@ -35,14 +35,6 @@ $ pip install -r requirements.txt
 $ python gradio_app.py
 ```
 
-### Run in Terminal
-
-1. Run the [main.py](./main.py)
-
-```
-$ python main.py
-```
-
 2. Chat in terminal, input your template and content.
 
 ## How To Define Your Template
