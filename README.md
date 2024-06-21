@@ -25,21 +25,36 @@ $ cp setting-example.json setting.json
 $ pip install -r requirements.txt
 ```
 
-## Getting Started
-
-### Run in Gradio
-
-1. Run the [gradio_app.py](./gradio_app.py)
+## Run in Gradio
 
 ```
-$ python gradio_app.py
+$ python run.py
 ```
 
-2. Chat in terminal, input your template and content.
+## How to use personal pptx template ?
 
-## How To Define Your Template
+Because there is no relatively stable extraction parameter scheme, the use of personal ppt templates needs to do their own parameterization and semantization.
 
-TODO write
+### Parameterization
+
+For each text box, you need to use the `{param}` to fill it back. 
+
+#### For example:
+
+<img src="./docs/imgs/docs_pptx_parameterization_examples.png" style="width: 380px">
+
+### Semantization
+
+And above parameter name can be customized, but because it needs to be understood by the LLM, **you must include semantics**. If need the Number to sort, you need to fill `[sth]_[no]` as the parameter name.
+
+#### For example:
+
+If the textbox is filled by title info, you should be fill it with `title`.
+
+If the textbox is filled by the content of the first paragraph, you should be fill it with `content_1`.
+
+If the textbox is filled by the content of the second paragraph, you should be fill it with `content_2`.
+
 
 ## Features
 
