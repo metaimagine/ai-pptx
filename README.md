@@ -13,10 +13,10 @@
 
 > python >= 3.10
 
-1. Clone the [setting-example.json](./setting-example.json) and update your own llm api key `llm -> api_key`
+1. Clone the [.env.example](./.env.example) and update your own llm api key `llm -> api_key`
 
 ```
-$ cp setting-example.json setting.json
+$ cp .env.example .env
 ```
 
 2. Install the dependencies
